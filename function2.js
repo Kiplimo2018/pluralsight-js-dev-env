@@ -1,14 +1,12 @@
-var getDieRoll = function () {
-    console.log ('rolling a die')
-    return Math.ceil (6* Math.random ());
+var getDieRoll = function (dieSize) {
+    var result = Math.ceil (dieSize * Math.random ());
+    return result;
 }
 
-var firstDie = getDieRoll ();
+var roll = getDieRoll (6) ;
 
-console.log (firstDie);
+if (roll >= 5 ) {
+    console.log ("Great roll!");
+}
 
-var secondDie = getDieRoll ();
-
-console.log (secondDie);
-
-console.log (firstDie + secondDie);
+console.log ( "You rolled a " + roll) ;
