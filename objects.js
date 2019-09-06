@@ -1,15 +1,21 @@
-var getDieRoll = function (dieSize) {
-    var result = Math.ceil (dieSize * Math.random ());
-    return result;
+var die = { roll : function () {
+        var result = Math.ceil (this.size * Math.random ());
+        this.totalRolls += 1;
+        return result;
+    }
 };
-
-var die = {
-    size: 4
-};
-
-console.log (die);
-console.log (die.size);
 
 die.size = 10;
+die.totalRolls = 0;
 
-console.log (die.size);
+
+console.log (die.roll());
+
+console.log (die.roll());
+
+console.log (die.roll());
+
+
+console.log (die);
+
+
